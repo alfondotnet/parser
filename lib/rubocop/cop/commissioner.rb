@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require 'pry'
 module RuboCop
   module Cop
     # Commissioner class is responsible for processing the AST and delegating

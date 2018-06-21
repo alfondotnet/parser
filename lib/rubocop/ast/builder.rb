@@ -14,6 +14,8 @@ module RuboCop
     #   parser = Parser::Ruby25.new(builder)
     #   root_node = parser.parse(buffer)
     class Builder < Parser::Builders::Default
+      require 'pry'
+      binding.pry
       NODE_MAP = {
         and:        AndNode,
         args:       ArgsNode,
@@ -26,6 +28,7 @@ module RuboCop
         for:        ForNode,
         hash:       HashNode,
         if:         IfNode,
+        indexasgn:  IndexasgnNode,
         kwsplat:    KeywordSplatNode,
         or:         OrNode,
         pair:       PairNode,
